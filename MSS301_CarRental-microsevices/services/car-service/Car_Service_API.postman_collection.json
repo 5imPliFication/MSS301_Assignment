@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "f5e9d91f-0b6d-4b53-a5b6-cd9121d51a60",
+		"name": "Car Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cars",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/cars",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8081",
+					"path": ["api", "cars"]
+				}
+			}
+		},
+		{
+			"name": "Get Car By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/cars/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8081",
+					"path": ["api", "cars", "1"]
+				}
+			}
+		},
+		{
+			"name": "Create Car",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carName\": \"Toyota Camry\",\n    \"carDescription\": \"Sedan 4 chỗ rộng rãi\",\n    \"numberOfDoors\": 4,\n    \"seatingCapacity\": 5,\n    \"fuelType\": \"Xăng\",\n    \"year\": 2022,\n    \"carStatus\": \"AVAILABLE\",\n    \"carRentingPricePerDay\": 50.0,\n    \"manufacturerId\": null,\n    \"supplierId\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/cars",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8081",
+					"path": ["api", "cars"]
+				}
+			}
+		},
+		{
+			"name": "Update Car",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carName\": \"Toyota Camry Bản Đặc Biệt\",\n    \"carDescription\": \"Sedan cao cấp\",\n    \"numberOfDoors\": 4,\n    \"seatingCapacity\": 5,\n    \"fuelType\": \"Xăng\",\n    \"year\": 2023,\n    \"carStatus\": \"RENTED\",\n    \"carRentingPricePerDay\": 60.0,\n    \"manufacturerId\": null,\n    \"supplierId\": null\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/cars/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8081",
+					"path": ["api", "cars", "1"]
+				}
+			}
+		},
+		{
+			"name": "Delete Car",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/cars/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8081",
+					"path": ["api", "cars", "1"]
+				}
+			}
+		}
+	]
+}

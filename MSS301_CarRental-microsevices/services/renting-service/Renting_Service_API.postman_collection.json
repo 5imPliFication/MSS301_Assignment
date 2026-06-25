@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "b2c3d4e5-f6a7-8901-2345-6789abcdef01",
+		"name": "Renting Service API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/transactions",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["api", "transactions"]
+				}
+			}
+		},
+		{
+			"name": "Get Transaction By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/transactions/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["api", "transactions", "1"]
+				}
+			}
+		},
+		{
+			"name": "Create Transaction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 1,\n    \"rentingDate\": \"2023-10-01\",\n    \"totalPrice\": 150.0,\n    \"rentingStatus\": \"PENDING\",\n    \"rentingDetails\": [\n        {\n            \"carId\": 1,\n            \"startDate\": \"2023-10-02\",\n            \"endDate\": \"2023-10-05\",\n            \"price\": 50.0\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/transactions",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["api", "transactions"]
+				}
+			}
+		},
+		{
+			"name": "Update Transaction",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 1,\n    \"rentingDate\": \"2023-10-01\",\n    \"totalPrice\": 150.0,\n    \"rentingStatus\": \"COMPLETED\",\n    \"rentingDetails\": [\n        {\n            \"carId\": 1,\n            \"startDate\": \"2023-10-02\",\n            \"endDate\": \"2023-10-05\",\n            \"price\": 50.0\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/transactions/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["api", "transactions", "1"]
+				}
+			}
+		},
+		{
+			"name": "Delete Transaction",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/transactions/1",
+					"protocol": "http",
+					"host": ["localhost"],
+					"port": "8082",
+					"path": ["api", "transactions", "1"]
+				}
+			}
+		}
+	]
+}

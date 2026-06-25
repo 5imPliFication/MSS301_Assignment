@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/services/car-service/src/main/resources/db/migration/V1__init_schema.sql" value="69137ca6-9ebe-41dc-a74f-b9460dfd23f4" />
+  </component>
+</project>
